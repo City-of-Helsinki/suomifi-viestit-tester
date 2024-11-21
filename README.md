@@ -19,6 +19,7 @@ using a virtualenv. Basically
 
 1. Setup & activate a virtualenv
 2. pip install -r requirements.txt
+3. pip install ipython     # optional, but much nicer experience
 
 ## Initializing
 
@@ -26,9 +27,13 @@ No real UI exists, this is just a Python class for doing tests.
 
 Note that "systemId" is your "username", you've received this from suomi.fi
 while registering for the messaging service. You can have multiple
-systemId, with their associated serviceIds.
+systemId, each with their associated serviceIds.
 
-1. python
+Also note that the messaging API is locked to the IP addresses you specified
+while registering. You'll get an error, if you try to access the API from
+any other address.
+
+1. ipython   # you can also use just plain python
 2. from suomifi_viestit_tester import SFMsgTester
 3. m=SFMsgTester()
 4. m.login("{your_suomifimsg_systemId}", "{your_suomifimsg_password}")
